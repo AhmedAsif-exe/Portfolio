@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M Ahmed Asif - Resume</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", "Helvetica", sans-serif;
+        font-size: 10pt;
+        line-height: 1.4;
+        color: #333;
+        background: white;
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+        border-bottom: 2.5px solid #0891b2;
+      }
+
+      .name {
+        font-size: 24pt;
+        font-weight: bold;
+        color: #0f172a;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+      }
+
+      .title {
+        font-size: 12pt;
+        color: #0891b2;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .contact-info {
+        font-size: 9pt;
+        color: #555;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .contact-info a {
+        color: #0891b2;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .section {
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: 12pt;
+        font-weight: bold;
+        color: #0f172a;
+        text-transform: uppercase;
+        border-bottom: 2px solid #0891b2;
+        padding-bottom: 3px;
+        margin-bottom: 7px;
+        letter-spacing: 0.5px;
+      }
+
+      .summary {
+        color: #555;
+        text-align: justify;
+        line-height: 1.4;
+        font-size: 9.5pt;
+      }
+
+      .experience-item,
+      .project-item {
+        margin-bottom: 10px;
+      }
+
+      .experience-header,
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+      }
+
+      .job-title,
+      .project-title {
+        font-size: 10.5pt;
+        font-weight: bold;
+        color: #0f172a;
+      }
+
+      .company,
+      .project-tech {
+        font-size: 9.5pt;
+        color: #0891b2;
+        font-weight: 600;
+      }
+
+      .date,
+      .location {
+        font-size: 9pt;
+        color: #666;
+        font-style: italic;
+      }
+
+      .achievements {
+        margin-top: 3px;
+      }
+
+      .achievements li,
+      .project-points li {
+        margin-left: 16px;
+        margin-bottom: 2px;
+        color: #444;
+        font-size: 9pt;
+        line-height: 1.4;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      .skill-category {
+        background-color: #f8f9fa;
+        padding: 6px 8px;
+        border-radius: 3px;
+        border-left: 3px solid #0891b2;
+      }
+
+      .skill-category-title {
+        font-weight: bold;
+        color: #0f172a;
+        font-size: 9.5pt;
+        margin-bottom: 3px;
+      }
+
+      .skill-items {
+        font-size: 8.5pt;
+        color: #555;
+        line-height: 1.4;
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: 4px;
+      }
+
+      .tech-tag {
+        background-color: #e0f2fe;
+        color: #0891b2;
+        padding: 1px 6px;
+        border-radius: 3px;
+        font-size: 8pt;
+        font-weight: 500;
+      }
+
+      .project-link {
+        font-size: 9pt;
+        color: #0891b2;
+        text-decoration: none;
+        margin-top: 4px;
+        display: inline-block;
+      }
+
+      .project-link:hover {
+        text-decoration: underline;
+      }
+
+      strong {
+        color: #0f172a;
+      }
+
+      .links-section {
+        margin-top: 15px;
+        padding-top: 12px;
+        border-top: 2px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #0891b2;
+        font-size: 9.5pt;
+        font-weight: 500;
+      }
+
+      .social-icon {
+        width: 18px;
+        height: 18px;
+        fill: #0891b2;
+      }
+
+      .qr-section {
+        text-align: center;
+      }
+
+      .qr-code {
+        width: 80px;
+        height: 80px;
+        border: 2px solid #0891b2;
+        border-radius: 4px;
+      }
+
+      .qr-label {
+        font-size: 8pt;
+        color: #666;
+        margin-top: 4px;
+        font-weight: 600;
+      }
+
+      @media print {
+        @page {
+          margin: 10mm;
+        }
+
+        body {
+          padding: 0;
+        }
+
+        .header {
+          page-break-after: avoid;
+        }
+
+        .section-title {
+          page-break-after: avoid;
+        }
+
+        .experience-item,
+        .project-item {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1 class="name">M AHMED ASIF</h1>
+      <div class="title">Full-Stack & AI Developer</div>
+      <div class="contact-info">
+        <span
+          >📧
+          <a href="mailto:ahmedaanasif@gmail.com"
+            >ahmedaanasif@gmail.com</a
+          ></span
+        >
+        <span>•</span>
+        <span>📱 +92 321 9555501</span>
+        <span>•</span>
+        <span>📍 Rawalpindi, Pakistan</span>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary">
+        Innovative Full-Stack Developer with expertise in building scalable web
+        applications, AI/ML integration, and data analytics solutions. Proven
+        track record of delivering high-performance systems serving 100K+ active
+        users while maintaining optimal infrastructure efficiency. Specialized
+        in deep learning applications including
+        <strong>Computer Vision (CycleGAN)</strong>,
+        <strong>NLP with Transformers</strong> for machine translation, and
+        <strong>IoT voice-controlled automation systems</strong>. Passionate
+        about turning complex problems into elegant digital solutions through
+        modern technologies including React, Node.js, Python, TensorFlow, and
+        cloud platforms. Experienced in leading development teams and mentoring
+        junior developers to enhance code quality and system architecture.
+      </p>
+    </div>
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Bachelor of Science in Computer Science</div>
+            <div class="company">FAST University Islamabad</div>
+          </div>
+          <div class="date">Graduated 2026</div>
+        </div>
+        <div class="location">Islamabad, Pakistan</div>
+        <ul class="achievements">
+          <li>
+            Final Year Project: <strong>VoiceBot</strong> - Offline
+            voice-controlled home automation system demonstrating exceptional
+            technical skills and innovation
+          </li>
+          <li>
+            Focused on
+            <strong>Full-Stack Development, AI/ML, and Data Science</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Professional Experience -->
+    <div class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Lead Web Developer</div>
+            <div class="company">Anime Anyway</div>
+          </div>
+          <div class="date">May 2025 – Present</div>
+        </div>
+        <div class="location">Remote</div>
+        <ul class="achievements">
+          <li>
+            Sustained
+            <strong>Supabase and Hostinger infrastructure</strong> under heavy
+            traffic (<strong>100K+ active users, 1.5M+ total views</strong>)
+            while maintaining strong performance on a low-tier setup
+          </li>
+          <li>
+            Led development and optimization of the platform to ensure
+            <strong>reliable content delivery</strong> and smooth user
+            experience for a large fan-driven audience
+          </li>
+          <li>
+            Implemented custom line-by-line comment system and Discord API
+            integration for efficient content moderation
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">Hostinger</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Performance Optimization</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Technical Lead</div>
+            <div class="company">Aba Virtual</div>
+          </div>
+          <div class="date">May 2025 – Present</div>
+        </div>
+        <div class="location">Remote</div>
+        <ul class="achievements">
+          <li>
+            Led <strong>full-stack development</strong> of an educational
+            platform from concept to deployment for children with special needs
+          </li>
+          <li>
+            Implemented <strong>interactive educational features</strong> using
+            PhaserJS game engine tailored for special needs students
+          </li>
+          <li>
+            Optimized system performance and integrated
+            <strong>Google Auth and PayPal API</strong> for secure
+            authentication and payment processing
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">PhaserJS</span>
+          <span class="tech-tag">Sanity CMS</span>
+          <span class="tech-tag">Google Auth</span>
+          <span class="tech-tag">PayPal API</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Full-Stack Developer Intern</div>
+            <div class="company">Codesloop</div>
+          </div>
+          <div class="date">Dec 2024 – Feb 2025</div>
+        </div>
+        <div class="location">Remote</div>
+        <ul class="achievements">
+          <li>
+            Engineered and optimized <strong>full-stack solutions</strong> to
+            improve performance and scalability using React, Node.js, and
+            MongoDB
+          </li>
+          <li>
+            Built a <strong>record and revenue tracking system</strong> for Iqra
+            Driving School with drag-and-drop class scheduling, streamlining
+            operations and financial management
+          </li>
+          <li>
+            Collaborated cross-functionally and assumed additional
+            responsibilities to drive project success
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Redux</span>
+          <span class="tech-tag">Express</span>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">
+              Full-Stack & Desktop Application Developer
+            </div>
+            <div class="company">PyBugs Technologies & BPO</div>
+          </div>
+          <div class="date">June 2024 – Jan 2025</div>
+        </div>
+        <div class="location">Saddar, Rawalpindi</div>
+        <ul class="achievements">
+          <li>
+            Developed and maintained
+            <strong>multiple management systems</strong> to streamline business
+            operations and improve workflow efficiency
+          </li>
+          <li>
+            Improved
+            <strong>backend performance and database efficiency</strong> through
+            system optimization and scalable architecture design
+          </li>
+          <li>
+            Contributed to architecture design and
+            <strong>mentored junior developers</strong> to enhance code quality
+            and team productivity
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">.NET Framework</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">WordPress</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Projects -->
+    <div class="section">
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <div class="project-title">
+              VoiceBot: Offline Voice-Controlled Home Automation
+            </div>
+            <div class="project-tech">
+              IoT • Voice AI • Automation | 6 Months
+            </div>
+          </div>
+        </div>
+        <ul class="project-points">
+          <li>
+            Developed an
+            <strong>offline voice-controlled home automation system</strong>
+            with privacy-first design and optional remote access
+          </li>
+          <li>
+            Implemented <strong>Natural Language Processing (NLP)</strong> for
+            accurate voice command recognition without cloud dependencies
+          </li>
+          <li>
+            Designed multi-user access system supporting various automation
+            scenarios
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Voice Processing</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Home Automation</span>
+        </div>
+        <a
+          href="https://github.com/AhmedAsif-exe/VocalBot"
+          class="project-link"
+          target="_blank"
+          >🔗 View on GitHub</a
+        >
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <div class="project-title">
+              Iqra Driving School Management Platform
+            </div>
+            <div class="project-tech">
+              Full-Stack • Business Management | Ongoing
+            </div>
+          </div>
+        </div>
+        <ul class="project-points">
+          <li>
+            Comprehensive driving school management system with
+            <strong>dual interfaces</strong> for Admins and Managers
+          </li>
+          <li>
+            Features include student registration, instructor/vehicle/branch
+            management,
+            <strong>payment tracking, and attendance marking</strong>
+          </li>
+          <li>
+            Implemented <strong>drag-and-drop class scheduling</strong> for
+            intuitive calendar management
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Redux</span>
+          <span class="tech-tag">Tailwind CSS</span>
+        </div>
+        <a
+          href="https://github.com/codesloop123/IQRA_Driving_School"
+          class="project-link"
+          target="_blank"
+          >🔗 View on GitHub</a
+        >
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <div class="project-title">
+              CycleGAN Implementation for Person Face Sketches
+            </div>
+            <div class="project-tech">Computer Vision • Deep Learning</div>
+          </div>
+        </div>
+        <ul class="project-points">
+          <li>
+            Implements <strong>CycleGAN by Jun-Yan Zhu</strong> using the Person
+            Face Sketches dataset from Kaggle to perform
+            <strong>bidirectional face–sketch translation</strong>
+          </li>
+          <li>
+            End-to-end training with unpaired image-to-image translation using
+            cycle consistency loss
+          </li>
+          <li>
+            Built <strong>Flask-based UI</strong> for real-time face-to-sketch
+            and sketch-to-face conversion
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">CycleGAN</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">Computer Vision</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-header">
+          <div>
+            <div class="project-title">
+              Machine Translation using Transformers
+            </div>
+            <div class="project-tech">NLP • Deep Learning</div>
+          </div>
+        </div>
+        <ul class="project-points">
+          <li>
+            A <strong>deep learning model</strong> that translates English text
+            into Urdu using a <strong>Transformer-based architecture</strong>
+          </li>
+          <li>
+            Implemented attention mechanisms and positional encoding for
+            sequence-to-sequence translation
+          </li>
+          <li>
+            Deployed with Flask backend enabling real-time translation with
+            <strong>CUDA acceleration</strong> for faster inference
+          </li>
+        </ul>
+        <div class="tech-tags">
+          <span class="tech-tag">Transformers</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">CUDA</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">Frontend Development</div>
+          <div class="skill-items">
+            Next.js, React, TypeScript, Tailwind CSS, HTML5, CSS3, JavaScript
+            ES6+
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Backend Development</div>
+          <div class="skill-items">
+            Node.js, Express, .NET Framework, RESTful APIs, PostgreSQL, MySQL,
+            Firebase, MongoDB
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">AI/ML & Data Science</div>
+          <div class="skill-items">
+            Python, YOLOv8, Computer Vision, TensorFlow, Data Analytics, Data
+            Visualization, Data Mining
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">DevOps & Tools</div>
+          <div class="skill-items">
+            Git, GitHub, Vercel, Netlify, Supabase, Hostinger, WordPress, CI/CD,
+            Sanity CMS
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links & Portfolio -->
+    <div class="links-section">
+      <div class="social-links">
+        <div class="social-link">
+          <svg
+            class="social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+          <span>github.com/AhmedAsif-exe</span>
+        </div>
+        <div class="social-link">
+          <svg
+            class="social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+          <span>linkedin.com/in/ahmed-asif-b62313334</span>
+        </div>
+      </div>
+      <div class="qr-section">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://digital-odyssey-4bde3.web.app/"
+          alt="Portfolio QR Code"
+          class="qr-code"
+        />
+        <div class="qr-label">Scan for Portfolio</div>
+      </div>
+    </div>
+  </body>
+</html>
