@@ -5,15 +5,15 @@ import React, { useState, useEffect, memo } from "react";
 const QuoteIcon = memo(() => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
+    width="36"
+    height="36"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-[#C8A796] mb-6"
+    className="text-[#06b6d4] mb-4 md:mb-6 md:w-12 md:h-12"
     aria-hidden="true"
   >
     <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
@@ -142,7 +142,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Ahmes's final year project demonstrated exceptional technical skills and innovation. His VocalBot application solved a real-world problem with cutting-edge AI technology. His research methodology and implementation were outstanding.",
+      "Ahmed's final year project demonstrated exceptional technical skills and innovation. His VocalBot application solved a real-world problem using cutting-edge AI technology, combining natural language processing with IoT integration seamlessly. What stood out most was his meticulous research methodology and quality implementation. He created a polished, production-ready system with thoughtful attention to user experience. His documentation was equally outstanding, making complex concepts accessible and well-organized.",
     name: "Mr Saad Salman",
     title: "Project Supervisor",
     organization: "FAST University",
@@ -152,7 +152,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     quote:
-      "Working with Ahmed at PyBugs was a pleasure. He quickly grasped complex full-stack concepts and delivered quality code consistently. His ability to work independently while collaborating effectively with the team stood out.",
+      "Working with Ahmed at PyBugs was an absolute pleasure. He quickly grasped complex full-stack concepts and consistently delivered clean, well-structured code. What impressed me most was his ability to work independently on challenging tasks while collaborating effectively with the team. He took initiative in solving problems, proposing elegant solutions proactively. His communication was clear and professional, meeting every deadline without compromising quality. Ahmed's expertise made him a valuable asset to our team.",
     name: "Faiza Faizan",
     title: "Founder",
     organization: "AbaVirtual",
@@ -223,17 +223,17 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#2a2525]"
+      className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-[#1a2332]"
     >
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-8">
-          <span className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8">
+          <span className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             What People Say
           </span>
         </h2>
 
-        <p className="text-center text-gray-400 mb-16">
+        <p className="text-center text-gray-400 mb-8 md:mb-16 text-sm md:text-base">
           Feedback from colleagues, supervisors, and mentors who've worked with
           me.
         </p>
@@ -243,7 +243,7 @@ const Testimonials: React.FC = () => {
           {/* Previous Button */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-gray-800/50 hover:bg-[#C8A796] text-gray-400 hover:text-white p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm"
+            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 bg-gray-800/50 hover:bg-[#06b6d4] text-gray-400 hover:text-white p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm"
             aria-label="Previous testimonial"
           >
             <ChevronLeftIcon />
@@ -252,27 +252,27 @@ const Testimonials: React.FC = () => {
           {/* Next Button */}
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-gray-800/50 hover:bg-[#C8A796] text-gray-400 hover:text-white p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm"
+            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 bg-gray-800/50 hover:bg-[#06b6d4] text-gray-400 hover:text-white p-3 rounded-full transition-all duration-300 z-10 backdrop-blur-sm"
             aria-label="Next testimonial"
           >
             <ChevronRightIcon />
           </button>
 
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 lg:p-12 transition-all duration-500">
+          <div className="bg-[#0f172a] backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-12 transition-all duration-500 flex flex-col">
             <div
-              className={`transition-all duration-300 ${
+              className={`transition-all duration-300 flex-1 flex flex-col ${
                 fadeIn ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
               }`}
             >
               <QuoteIcon />
 
-              <div className="mb-8">
+              <div className="mb-6 md:mb-8">
                 {/* Quote */}
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
                   "{currentTestimonial.quote}"
                 </p>
 
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2  w-full justify-center sm:justify-start">
                   {Array.from({ length: currentTestimonial.rating }).map(
                     (_, index) => (
                       <StarIcon key={index} />
@@ -282,10 +282,10 @@ const Testimonials: React.FC = () => {
               </div>
 
               {/* Author Info */}
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-col md:flex-row justify-between gap-6 items-center">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#C8A796] to-[#F4F3F8] rounded-full flex items-center justify-center">
-                    <span className="text-[#332d2d] font-bold text-lg">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-[#06b6d4] to-[#a78bfa] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#0f172a] font-bold text-base md:text-lg">
                       {currentTestimonial.initials}
                     </span>
                   </div>
@@ -296,12 +296,12 @@ const Testimonials: React.FC = () => {
                     <p className="text-gray-400 text-sm">
                       {currentTestimonial.title}
                     </p>
-                    <p className="text-[#C8A796] text-sm font-medium">
+                    <p className="text-[#06b6d4] text-sm font-medium">
                       {currentTestimonial.organization}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center gap-6">
+                <div className="flex items-center justify-center md:justify-start gap-3 md:gap-6">
                   {currentTestimonial.linkedin && (
                     <a
                       href={currentTestimonial.linkedin}
@@ -309,12 +309,12 @@ const Testimonials: React.FC = () => {
                       rel="noopener noreferrer"
                       className="group flex flex-col items-center gap-2"
                     >
-                      <div className="w-16 h-16 bg-gray-800/50 hover:bg-[#C8A796] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-800/50 hover:bg-[#06b6d4] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                         <div className="text-gray-400 group-hover:text-white transition-colors">
                           <LinkedInIcon />
                         </div>
                       </div>
-                      <span className="text-sm text-gray-400 group-hover:text-[#C8A796] transition-colors">
+                      <span className="text-xs md:text-sm text-gray-400 group-hover:text-[#06b6d4] transition-colors">
                         LinkedIn
                       </span>
                     </a>
@@ -327,12 +327,12 @@ const Testimonials: React.FC = () => {
                       rel="noopener noreferrer"
                       className="group flex flex-col items-center gap-2"
                     >
-                      <div className="w-16 h-16 bg-gray-800/50 hover:bg-[#C8A796] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-800/50 hover:bg-[#06b6d4] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                         <div className="text-gray-400 group-hover:text-white transition-colors">
                           <InstagramIcon />
                         </div>
                       </div>
-                      <span className="text-sm text-gray-400 group-hover:text-[#C8A796] transition-colors">
+                      <span className="text-xs md:text-sm text-gray-400 group-hover:text-[#06b6d4] transition-colors">
                         Instagram
                       </span>
                     </a>
@@ -345,12 +345,12 @@ const Testimonials: React.FC = () => {
                       rel="noopener noreferrer"
                       className="group flex flex-col items-center gap-2"
                     >
-                      <div className="w-16 h-16 bg-gray-800/50 hover:bg-[#C8A796] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-800/50 hover:bg-[#06b6d4] rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
                         <div className="text-gray-400 group-hover:text-white transition-colors">
                           <YoutubeIcon />
                         </div>
                       </div>
-                      <span className="text-sm text-gray-400 group-hover:text-[#C8A796] transition-colors">
+                      <span className="text-xs md:text-sm text-gray-400 group-hover:text-[#06b6d4] transition-colors">
                         Youtube
                       </span>
                     </a>
@@ -361,15 +361,15 @@ const Testimonials: React.FC = () => {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-6 md:mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-[#C8A796] w-8"
-                    : "bg-gray-600 hover:bg-gray-500"
+                    ? "bg-[#06b6d4] w-8 md:w-8"
+                    : "bg-gray-600 hover:bg-gray-500 w-3"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

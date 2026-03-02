@@ -88,7 +88,7 @@ const BookIcon = memo(() => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-[#C8A796] flex-shrink-0"
+    className="text-[#06b6d4] flex-shrink-0"
     aria-hidden="true"
   >
     <path d="M12 7v14"></path>
@@ -107,10 +107,10 @@ const StoryCard = memo<{
       ? "border-l-4 border-yellow-400"
       : "border-l-4 border-[#1D1F25]";
   const titleColor =
-    color === "beginning" ? "text-[#C8A796]" : "text-[#F4F3F8]";
+    color === "beginning" ? "text-[#06b6d4]" : "text-[#a78bfa]";
   return (
     <div
-      className={`bg-[#0F1014]/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 ${borderClass}`}
+      className={`bg-[#0f172a]/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 ${borderClass}`}
     >
       <h3 className={`text-2xl font-semibold mb-4 ${titleColor}`}>{title}</h3>
       {children}
@@ -141,7 +141,7 @@ const SkillProgress = memo<{
     </div>
     <div className="w-full bg-[#1D1F25] rounded-full h-2">
       <div
-        className="h-full bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] rounded-full transition-all duration-300"
+        className="h-full bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] rounded-full transition-all duration-300"
         style={{ width: `${percentage}%` }}
       ></div>
     </div>
@@ -190,10 +190,10 @@ const MyStory: FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#292726]">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1e293b]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             My Story
           </span>
         </h2>
@@ -208,7 +208,7 @@ const MyStory: FC = () => {
                 code. What began as curiosity about coding evolved into a deep
                 love for full-stack development and AI.
               </p>
-              <p className="text-[#C8A796] font-semibold text-sm leading-relaxed">
+              <p className="text-[#06b6d4] font-semibold text-sm leading-relaxed">
                 "Every bug I fixed, every feature I built, taught me that great
                 software isn't just about code—it's about understanding people's
                 problems and crafting elegant solutions."
@@ -232,7 +232,7 @@ const MyStory: FC = () => {
           {/* Right Column - Drives & Skills */}
           <div className="flex flex-col gap-6">
             {/* What Drives Me */}
-            <div className="bg-gradient-to-br from-[#141518]/20 to-[#0F1014]/20 rounded-xl p-8 border border-gray-700">
+            <div className="bg-gradient-to-br from-[#06b6d4]/20 to-[#0f172a]/20 rounded-xl p-8 border border-gray-700">
               <h3 className="text-xl font-semibold mb-6 text-gray-300">
                 What Drives Me
               </h3>
@@ -244,7 +244,7 @@ const MyStory: FC = () => {
             </div>
 
             {/* Currently Learning */}
-            <div className="bg-[#0F1014]/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+            <div className="bg-[#0f172a]/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
               <h4 className="flex items-center gap-2 font-semibold mb-4 text-gray-300">
                 <BookIcon />
                 Currently Learning

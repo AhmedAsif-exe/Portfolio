@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.7,
+      threshold: 0.3,
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -69,11 +69,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-[#0f1014]/95 backdrop-blur-md shadow-2xl">
+    <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-[#0f172a]/95 backdrop-blur-md shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             Ahmed Asif
           </div>
 
@@ -89,8 +89,8 @@ export default function Navbar() {
                 }}
                 className={`capitalize transition-colors duration-200 ${
                   activeSection === link.id
-                    ? "text-[#C8A796]"
-                    : "text-gray-300 hover:text-[#C8A796]"
+                    ? "text-[#06b6d4]"
+                    : "text-gray-300 hover:text-[#06b6d4]"
                 }`}
               >
                 {link.name}
@@ -101,7 +101,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-[#C8A796] transition-colors"
+            className="md:hidden text-gray-300 hover:text-[#06b6d4] transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -121,8 +121,8 @@ export default function Navbar() {
                 }}
                 className={`block w-full text-left px-4 py-2 capitalize transition-colors duration-200 rounded ${
                   activeSection === link.id
-                    ? "bg-gray-800/50 text-[#C8A796]"
-                    : "text-gray-300 hover:text-[#C8A796] hover:bg-gray-800/50"
+                    ? "bg-gray-800/50 text-[#06b6d4]"
+                    : "text-gray-300 hover:text-[#06b6d4] hover:bg-gray-800/50"
                 }`}
               >
                 {link.name}

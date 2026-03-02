@@ -12,7 +12,7 @@ const CalendarIcon = memo(() => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-[#C8A796]"
+    className="text-[#06b6d4]"
     aria-hidden="true"
   >
     <path d="M8 2v4"></path>
@@ -33,7 +33,7 @@ const MapPinIcon = memo(() => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-[#F4F3F8]/90"
+    className="text-[#a78bfa]/90"
     aria-hidden="true"
   >
     <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
@@ -188,30 +188,30 @@ const Journey: FC = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleExperiences = showAll ? experiences : experiences.slice(0, 2);
   return (
-    <section id="journey" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#211f1f]">
+    <section id="journey" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             Professional Journey
           </span>
         </h2>
         <div className="space-y-12">
           {visibleExperiences.map((exp, idx) => (
             <div key={idx} className="relative">
-              <div className="bg-[#0F1014]/50 backdrop-blur-sm rounded-xl p-8 hover:bg-[#0F1014]/70 transition-all duration-300">
+              <div className="bg-[#000000]/40 backdrop-blur-sm rounded-xl p-8 hover:bg-[#0f172a]/70 transition-all duration-300">
                 <div className="grid lg:grid-cols-3 gap-8">
                   {/* left column */}
                   <div className="lg:col-span-1">
                     <div className="flex items-center gap-2 mb-2">
                       <CalendarIcon />
-                      <span className="text-[#C8A796] text-sm font-medium">
+                      <span className="text-[#06b6d4] text-sm font-medium">
                         {exp.date}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#C8A796] text-left mb-2">
+                    <h3 className="text-2xl font-bold text-[#06b6d4] text-left mb-2">
                       {exp.title}
                     </h3>
-                    <h4 className="text-lg text-[#F4F3F8]/80 text-left mb-2">
+                    <h4 className="text-lg text-[#a78bfa]/80 text-left mb-2">
                       {exp.company}
                     </h4>
                     <div className="flex items-center gap-2 text-gray-400 text-sm">
@@ -221,7 +221,7 @@ const Journey: FC = () => {
                   </div>
                   {/* right column */}
                   <div className="lg:col-span-2 space-y-6">
-                    <p className="text-[#F4F3F8] leading-relaxed italic">
+                    <p className="text-[#a78bfa] leading-relaxed italic">
                       &quot;{exp.quote}&quot;
                     </p>
                     <p className="text-gray-300 leading-relaxed text-left">
@@ -236,7 +236,7 @@ const Journey: FC = () => {
                         {exp.achievements.map((a, i) => (
                           <li key={i} className="flex items-start gap-3">
                             <ArrowRightIcon />
-                            <span className="text-[#F4F3F8] text-sm text-left">
+                            <span className="text-[#a78bfa] text-sm text-left">
                               {a}
                             </span>
                           </li>
@@ -247,7 +247,7 @@ const Journey: FC = () => {
                       {exp.tech.map((t, i) => (
                         <span
                           key={i}
-                          className="bg-[#C8A796]/20 text-[#C8A796] px-3 py-1 rounded-full text-sm"
+                          className="bg-[#06b6d4]/20 text-[#06b6d4] px-3 py-1 rounded-full text-sm"
                         >
                           {t}
                         </span>
@@ -258,7 +258,7 @@ const Journey: FC = () => {
               </div>
               {idx < visibleExperiences.length - 1 && (
                 <div className="flex justify-center my-8">
-                  <div className="w-px h-12 bg-gradient-to-b from-[#C8A796] to-[#F4F3F8]"></div>
+                  <div className="w-px h-12 bg-gradient-to-b from-[#06b6d4] to-[#a78bfa]"></div>
                 </div>
               )}
             </div>
@@ -267,7 +267,7 @@ const Journey: FC = () => {
             <div className="flex justify-center mt-6">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="flex flex-col items-center text-[#C8A796] hover:scale-110 transition-all duration-300"
+                className="flex flex-col items-center text-[#06b6d4] hover:scale-110 transition-all duration-300"
               >
                 <div
                   className={`transition-transform duration-300 ${

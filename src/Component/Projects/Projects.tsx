@@ -84,11 +84,11 @@ const Projects: React.FC = () => {
   const visibleProjects = showAll ? projects : projects.slice(0, 2);
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#332d2d]">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1e293b]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center mb-8">
-          <span className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             Featured Projects
           </span>
         </h2>
@@ -107,20 +107,20 @@ const Projects: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer"
+                className="bg-[#000000]/40 backdrop-blur-sm rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300 group cursor-pointer"
               >
                 {/* Image Section */}
                 <div className="relative overflow-hidden rounded-lg mb-6 bg-gradient-to-br from-gray-500/20 to-[#3b2020]/20 h-48 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#C8A796] to-[#F4F3F8] rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Icon className="text-[#332d2d]" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#06b6d4] to-[#a78bfa] rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <Icon className="text-[#0f172a]" />
                     </div>
                     <p className="text-gray-400 text-sm">Project Screenshots</p>
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent mb-2">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent mb-2">
                   {project.title}
                 </h3>
 
@@ -142,7 +142,7 @@ const Projects: React.FC = () => {
                     {project.tech.map((techItem, i) => (
                       <span
                         key={i}
-                        className="bg-[#C8A796]/20 text-[#C8A796] px-2 py-1 rounded text-xs"
+                        className="bg-[#06b6d4]/20 text-[#06b6d4] px-2 py-1 rounded text-xs"
                       >
                         {techItem}
                       </span>
@@ -154,7 +154,7 @@ const Projects: React.FC = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-[#C8A796] transition-colors"
+                      className="text-gray-400 hover:text-[#06b6d4] transition-colors"
                     >
                       <Github size={18} />
                     </a>
@@ -176,7 +176,7 @@ const Projects: React.FC = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="flex flex-col items-center text-[#C8A796] hover:scale-110 transition-all duration-300"
+            className="flex flex-col items-center text-[#06b6d4] hover:scale-110 transition-all duration-300"
           >
             <div
               className={`transition-transform duration-300 ${

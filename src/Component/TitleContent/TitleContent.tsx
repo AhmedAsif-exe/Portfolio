@@ -1,5 +1,4 @@
 import { memo } from "react";
-import classes from "./TitleContent.module.css";
 import profileImg from "../../Utils/Images/Me.jpg";
 
 // SVG Icons Components
@@ -176,9 +175,9 @@ interface BadgeProps {
 }
 
 const Badge = memo(({ icon, text, colorClass }: BadgeProps) => (
-  <div className={`${classes.badge} ${colorClass}`}>
-    <span className={classes.badgeIcon}>{icon}</span>
-    <span className={classes.badgeText}>{text}</span>
+  <div className={`flex items-center gap-1 text-sm ${colorClass}`}>
+    <span className="w-4 h-4">{icon}</span>
+    <span className="hidden sm:inline">{text}</span>
   </div>
 ));
 
@@ -193,25 +192,35 @@ interface SocialLinkProps {
 
 const SocialLink = memo(
   ({ href, icon, label, target, rel }: SocialLinkProps) => (
-    <a href={href} target={target} rel={rel} className={classes.socialLink}>
-      <span className={classes.socialIcon}>{icon}</span>
-      <span className={classes.socialLinkText}>{label}</span>
+    <a
+      href={href}
+      target={target}
+      rel={rel}
+      className="no-underline text-[#a78bfa] transition-colors duration-200 flex items-center gap-2 hover:text-[#06b6d4]"
+    >
+      <span className="w-6 h-6">{icon}</span>
+      <span className="hidden sm:inline">{label}</span>
     </a>
   ),
 );
 
 // Profile Image Component
 const ProfileImage = memo(() => (
-  <div className={classes.profileSection}>
-    <div className={classes.profileImage}>
-      <div className={classes.profileImageInner}>
-        <div className={classes.profileImageWrapper}>
-          <div className={classes.profileImageGradient}>
-            <div className={classes.profileImagePic}>
-              <img src={profileImg} alt="Profile Photo" loading="lazy" />
+  <div className="animate-fadeInUp mt-16 sm:mt-0">
+    <div className="w-80 h-80 mx-auto lg:mx-0 lg:mb-0 rounded-full bg-gradient-to-br from-[#06b6d4] to-[#a78bfa] p-1 lg:order-2">
+      <div className="w-full h-full rounded-full bg-[#0f172a] flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-48 h-48 bg-gradient-to-br from-[#06b6d4] to-[#a78bfa] rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="w-full h-full rounded-full bg-[#0f172a] overflow-hidden">
+              <img
+                src={profileImg}
+                alt="Profile Photo"
+                loading="lazy"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </div>
-          <p className={classes.profileLabel}>Profile Picture</p>
+          <p className="text-sm text-gray-200">Profile Picture</p>
         </div>
       </div>
     </div>
@@ -224,17 +233,17 @@ const TitleContent = () => {
     {
       icon: <CoffeeIcon />,
       text: "Chai-fueled coder",
-      colorClass: classes.badgeCoffee,
+      colorClass: "text-gray-200",
     },
     {
       icon: <LightbulbIcon />,
       text: "Problem solver at heart",
-      colorClass: classes.badgeLightbulb,
+      colorClass: "text-gray-200",
     },
     {
       icon: <HeartIcon />,
       text: "Passionate about AI/ML",
-      colorClass: classes.badgeHeart,
+      colorClass: "text-gray-200",
     },
   ];
 
@@ -261,14 +270,23 @@ const TitleContent = () => {
   ];
 
   return (
-    <section className={classes.section} id="home">
-      <div className={classes.backgroundGradient} />
-      <div className={classes.container}>
+    <section
+      className="min-h-screen flex items-start md:items-center justify-center px-4 sm:px-6 lg:px-8 py-20 md:py-8 relative bg-[#0f172a]"
+      id="home"
+    >
+      <div
+        className="absolute inset-0 animate-pulse-gradient"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(15, 23, 42, 0.3), rgba(167, 139, 250, 0.1), rgba(6, 182, 212, 0.15), rgba(167, 139, 250, 0.1))",
+        }}
+      />
+      <div className="max-w-6xl mx-auto grid gap-12 items-center relative z-10 lg:grid-cols-[1fr_2fr]">
         <ProfileImage />
 
-        <div className={classes.contentSection}>
+        <div className="text-center lg:text-left text-gray-200">
           {/* Badges Section */}
-          <div className={classes.badges}>
+          <div className="flex items-center justify-center lg:justify-start gap-2 mb-0 flex-wrap">
             {badges.map((badge, idx) => (
               <Badge
                 key={idx}
@@ -280,17 +298,19 @@ const TitleContent = () => {
           </div>
 
           {/* Name Heading */}
-          <h1 className={classes.heading}>
-            <span className={classes.headingGradient}>M Ahmed Asif</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mt-8 sm:mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-[#a78bfa] via-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
+              M. Ahmed Asif
+            </span>
           </h1>
 
           {/* Subtitle and Description */}
-          <div className={classes.subtitle}>
-            <h2 className={classes.subtitleHeading}>
-              Full-Stack Developer & AI Enthusiast
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl mb-4 font-semibold bg-gradient-to-r from-[#06b6d4] via-[#a78bfa] to-[#06b6d4] bg-clip-text text-transparent">
+              Full-Stack & AI Developer
             </h2>
-            <p className={classes.subtitleText}>
-              <span className={classes.subtitleQuote}>
+            <p className="text-lg md:text-xl text-gray-200 mb-6 leading-relaxed">
+              <span className="text-[#06b6d4] font-semibold">
                 "I turn complex problems into elegant digital solutions."
               </span>
               <br />
@@ -300,17 +320,11 @@ const TitleContent = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className={classes.buttonContainer}>
-            <button className={classes.buttonPrimary}>
-              <EyeIcon />
-              View Case Studies
-            </button>
-
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
             <a
-              href="https://docs.google.com/document/d/1MTCJRJwfR7AGZwTpFS78v_tl35gqBMch/edit?usp=sharing&ouid=114713764060503742733&rtpof=true&sd=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes.buttonSecondary}
+              href="/Ahmed_Asif_Resume.pdf"
+              download="Ahmed_Asif_Resume.pdf"
+              className="border-2 border-[#06b6d4] text-[#06b6d4] px-8 py-4 rounded-full font-medium cursor-pointer transition-all duration-300 flex items-center gap-2 bg-transparent no-underline text-base hover:border-[#a78bfa] hover:text-[#a78bfa]"
             >
               <DownloadIcon />
               Download Resume
@@ -318,7 +332,7 @@ const TitleContent = () => {
           </div>
 
           {/* Social Links */}
-          <nav className={classes.socialLinks}>
+          <nav className="flex items-center justify-center lg:justify-start gap-6">
             {socialLinks.map((link, idx) => (
               <SocialLink
                 key={idx}
@@ -334,9 +348,15 @@ const TitleContent = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className={classes.scrollIndicator}>
-        <ChevronDownIcon />
-      </div>
+      <a
+        href="#about"
+        className="absolute bottom-8 mt-3 sm:mt-0 -translate-x-1/2 animate-bounce-slow cursor-pointer"
+        aria-label="Scroll to About section"
+      >
+        <div className="w-8 h-8 text-[#06b6d4]">
+          <ChevronDownIcon />
+        </div>
+      </a>
     </section>
   );
 };

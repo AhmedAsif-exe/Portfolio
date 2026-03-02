@@ -58,11 +58,11 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
     <section
       id="skills"
       ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[#332d2d]"
+      className="py-20 px-4 sm:px-6 lg:px-8  bg-[#0f172a]"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8">
-          <span className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] bg-clip-text text-transparent">
             Skills & Expertise
           </span>
         </h2>
@@ -81,7 +81,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-semibold text-[#C8A796] flex items-center gap-2">
+                  <h3 className="text-xl font-semibold text-[#06b6d4] flex items-center gap-2">
                     <Icon size={20} />
                     {group.title}
                   </h3>
@@ -92,7 +92,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                     <div className="w-16 bg-gray-700 rounded-full h-2">
                       <div
                         style={{ width: `${group.score}%` }}
-                        className="bg-gradient-to-r from-[#C8A796] to-[#F4F3F8] h-2 rounded-full"
+                        className="bg-gradient-to-r from-[#06b6d4] to-[#a78bfa] h-2 rounded-full"
                       />
                     </div>
                   </div>
@@ -102,7 +102,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                   {group.items.map((item) => (
                     <div
                       key={item}
-                      className="bg-gray-700/50 text-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-[#C8A796]/20 hover:text-[#F4F3F8] transition-colors duration-200 text-center"
+                      className="bg-gray-700/50 text-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-[#06b6d4]/20 hover:text-[#a78bfa] transition-colors duration-200 text-center"
                     >
                       {item}
                     </div>
