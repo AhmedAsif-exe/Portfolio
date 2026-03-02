@@ -10,7 +10,7 @@ import "@mantine/carousel/styles.css";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 const client = new ApolloClient({
   uri: "https://zg1yzeqp.api.sanity.io/v2023-08-01/graphql/production/default",
@@ -23,7 +23,7 @@ root.render(
         <App />
       </ApolloProvider>
     </MantineProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

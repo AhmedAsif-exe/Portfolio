@@ -1,0 +1,414 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Main section */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  background-color: #0f1014;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Background gradient */
+.backgroundGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(238, 239, 245, 0.1),
+    rgba(15, 16, 20, 0.3),
+    rgba(249, 248, 253, 0.1),
+    rgba(68, 57, 53, 0.2),
+    rgba(230, 228, 231, 0.1)
+  );
+  animation: pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Main container */
+.container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Profile section */
+.profileSection {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.profileImage {
+  width: 20rem;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #e6e4e7, #443935);
+  padding: 4px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .profileImage {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+
+.profileImageInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #0f1014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImageWrapper {
+  text-align: center;
+}
+
+.profileImageGradient {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(135deg, #eeeff5, #e6e4e7);
+  border-radius: 9999px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImagePic {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #0f1014;
+  overflow: hidden;
+}
+
+.profileImagePic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+.profileLabel {
+  font-size: 0.875rem;
+  color: #eeeff5;
+}
+
+/* Content section */
+.contentSection {
+  text-align: center;
+  color: #eeeff5;
+}
+
+@media (min-width: 1024px) {
+  .contentSection {
+    text-align: left;
+  }
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .badges {
+    justify-content: flex-start;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.badgeCoffee {
+  color: #eeeff5;
+}
+
+.badgeLightbulb {
+  color: #eeeff5;
+}
+
+.badgeHeart {
+  color: #eeeff5;
+}
+
+.badgeIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.badgeText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .badgeText {
+    display: inline;
+  }
+}
+
+/* Name heading */
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  line-height: 0.6;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 4.5rem;
+  }
+}
+
+.headingGradient {
+  background: linear-gradient(to right, #eeeff5, #d4a574, #e6e4e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle section */
+.subtitle {
+  margin-bottom: 2rem;
+}
+
+.subtitleHeading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #d4a574, #e6e4e7, #eeeff5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 768px) {
+  .subtitleHeading {
+    font-size: 1.875rem;
+  }
+}
+
+.subtitleText {
+  font-size: 1.125rem;
+  color: #eeeff5;
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .subtitleText {
+    font-size: 1.25rem;
+  }
+}
+
+.subtitleQuote {
+  color: #d4a574;
+  font-weight: 600;
+}
+
+/* Buttons */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .buttonContainer {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonContainer {
+    justify-content: flex-start;
+  }
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, #443935, #e6e4e7);
+  color: #0f1014;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.buttonPrimary:hover {
+  background: linear-gradient(135deg, #0f1014, #443935);
+  transform: scale(1.05);
+}
+
+.buttonSecondary {
+  border: 2px solid #eeeff5;
+  color: #eeeff5;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.buttonSecondary:hover {
+  background-color: #443935;
+  color: #eeeff5;
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Social links */
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .socialLinks {
+    justify-content: flex-start;
+  }
+}
+
+.socialLink {
+  text-decoration: none;
+  color: #eeeff5;
+  transition: color 200ms;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialLink:hover {
+  color: #e6e4e7;
+}
+
+.socialIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.socialLinkText {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .socialLinkText {
+    display: inline;
+  }
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scrollIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #eeeff5;
+}

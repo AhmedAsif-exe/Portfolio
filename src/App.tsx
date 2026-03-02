@@ -1,21 +1,24 @@
-import React, { useRef } from "react";
 import "./App.css";
-import TitlePage from "./Component/TitlePage/TitlePage";
-import AboutUs from "./Component/AboutUs/AboutUs";
+import Navbar from "./Component/Navbar/Navbar";
 import Skills from "./Component/Skills/Skills";
-import Works from "./Component/Works/Works";
 import Footer from "./Component/Footer/Footer";
-
+import MyStory from "./Component/MyStory/MyStory";
+import Journey from "./Component/Journey/Journey";
+import Projects from "./Component/Projects/Projects";
+import Testimonials from "./Component/Testimonials/Testimonials";
+import Contact from "./Component/Contact/Contact";
+import TitleContent from "./Component/TitleContent/TitleContent";
 function App() {
-  const AboutUsRef = useRef<HTMLElement>(null);
-  const SkillsRef = useRef<HTMLElement>(null);
-  const WorksRef = useRef<HTMLElement>(null);
   return (
     <div className="App">
-      <TitlePage AboutUs={AboutUsRef} Skills={SkillsRef} Works={WorksRef} />
-      <AboutUs ref={AboutUsRef} Works={WorksRef}/>
-      <Skills ref={SkillsRef} />
-      <Works ref={WorksRef} />
+      <Navbar />
+      <TitleContent />
+      <MyStory />
+      <Journey />
+      <Projects />
+      <Skills />
+      <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
