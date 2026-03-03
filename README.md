@@ -17,16 +17,19 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 ## 📋 Tech Stack
 
 ### Frontend
+
 - **React 18** - UI framework
 - **TypeScript** - Type safety
 - **Tailwind CSS 4.2** - Utilities-first styling
 - **Lucide React** - Icon library
 
 ### Development Tools
+
 - **React Scripts 5.0** - Build configuration
 - **PostCSS & Autoprefixer** - CSS processing
 
 ### Hosting
+
 - **Firebase** - Production deployment
 - **GitHub** - Version control
 
@@ -57,18 +60,21 @@ src/
 ## 🎨 Component Highlights
 
 ### TitleContent.tsx
+
 - **100% Tailwind CSS** - Fully migrated from CSS Modules
 - Responsive grid layout (1/3 profile : 2/3 content on desktop)
 - Custom animations (fadeInUp, pulse-shadow)
 - Mobile-optimized with smooth scroll behavior
 
 ### Testimonials.tsx
+
 - Fixed-height carousel (600px min-height)
 - Auto-play functionality with manual controls
 - Responsive social icons
 - Mobile-friendly navigation dots
 
 ### Navbar.tsx
+
 - Fixed positioning with backdrop blur
 - Intersection Observer for active section tracking (30% threshold)
 - Smooth scrolling to sections
@@ -99,6 +105,7 @@ npm test
 ## 📦 Dependencies Removed (Refactoring)
 
 Cleaned up unused dependencies for better performance:
+
 - ❌ Apollo Client & GraphQL
 - ❌ Mantine UI components
 - ❌ React Burger Menu
@@ -119,6 +126,7 @@ Cleaned up unused dependencies for better performance:
 ## 📄 Resume
 
 An ATS-friendly PDF resume is included in the portfolio:
+
 - One-page format with optimized spacing
 - Comprehensive project and experience details
 - Scannable QR code linking to digital portfolio

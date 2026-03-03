@@ -201,7 +201,6 @@ const ProfileImage = memo(() => (
               />
             </div>
           </div>
-          <p className="text-sm text-gray-200">Profile Picture</p>
         </div>
       </div>
     </div>

@@ -140,19 +140,10 @@ interface Testimonial {
 // Testimonial Data
 const testimonials: Testimonial[] = [
   {
-    id: 1,
-    quote:
-      "Ahmed's final year project demonstrated exceptional technical skills and innovation. His VocalBot application solved a real-world problem using cutting-edge AI technology, combining natural language processing with IoT integration seamlessly. What stood out most was his meticulous research methodology and quality implementation. He created a polished, production-ready system with thoughtful attention to user experience. His documentation was equally outstanding, making complex concepts accessible and well-organized.",
-    name: "Mr Saad Salman",
-    title: "Project Supervisor",
-    organization: "FAST University",
-    initials: "SS",
-    rating: 5,
-  },
-  {
     id: 2,
     quote:
-      "Working with Ahmed at PyBugs was an absolute pleasure. He quickly grasped complex full-stack concepts and consistently delivered clean, well-structured code. What impressed me most was his ability to work independently on challenging tasks while collaborating effectively with the team. He took initiative in solving problems, proposing elegant solutions proactively. His communication was clear and professional, meeting every deadline without compromising quality. Ahmed's expertise made him a valuable asset to our team.",
+      "Working with Ahmed has been rewarding. His technical competence and hardworking nature consistently deliver outstanding results. He excels at clear communication, explaining complex concepts effortlessly to stakeholders. His professionalism, reliability, and dedication make him an invaluable asset to any team. I highly recommend him without hesitation.",
+
     name: "Faiza Faizan",
     title: "Founder",
     organization: "AbaVirtual",

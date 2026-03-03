@@ -52,7 +52,7 @@ const CheckIcon = memo(() => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-green-400"
+    className="text-[#06b6d4]"
     aria-hidden="true"
   >
     <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
@@ -71,7 +71,7 @@ const ArrowRightIcon = memo(() => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="text-green-400 mt-1 flex-shrink-0"
+    className="text-[#06b6d4] mt-1 flex-shrink-0"
     aria-hidden="true"
   >
     <path d="M5 12h14"></path>
@@ -96,7 +96,7 @@ const experiences: Experience[] = [
     date: "June 2024 – Jan 2025",
     title: "FullStack & Desktop Application Developer",
     company: "PyBugs Technologies & BPO",
-    location: "Saddar, RawalPindi",
+    location: "Saddar, Rawalpindi",
     quote:
       "Crafting scalable digital solutions while turning complex business challenges into clean, efficient systems.",
     description:
@@ -228,7 +228,7 @@ const Journey: FC = () => {
                       {exp.description}
                     </p>
                     <div>
-                      <h5 className="text-sm font-semibold text-green-400 mb-3 flex items-center gap-2">
+                      <h5 className="text-sm font-semibold text-[#06b6d4] mb-3 flex items-center gap-2">
                         <CheckIcon />
                         Key Achievements
                       </h5>

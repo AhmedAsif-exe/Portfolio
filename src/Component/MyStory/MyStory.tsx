@@ -203,10 +203,11 @@ const MyStory: FC = () => {
           <div className="flex flex-col gap-6">
             <StoryCard title="The Beginning" color="beginning">
               <p className="text-gray-300 leading-relaxed mb-4 text-sm">
-                My journey started at Fast University Islamabad, where I
-                discovered my passion for solving real-world problems through
-                code. What began as curiosity about coding evolved into a deep
-                love for full-stack development and AI.
+                My journey started at <b>NUCES</b> (National University of
+                Computer & Emerging Sciences) Islamabad, where I discovered my
+                passion for solving real-world problems through code. What began
+                as curiosity about coding evolved into a deep love for
+                full-stack development and AI.
               </p>
               <p className="text-[#06b6d4] font-semibold text-sm leading-relaxed">
                 "Every bug I fixed, every feature I built, taught me that great
@@ -215,7 +216,7 @@ const MyStory: FC = () => {
               </p>
             </StoryCard>
 
-            <StoryCard title="The Growth" color="growth">
+            <StoryCard title="The Growth" color="beginning">
               <p className="text-gray-300 leading-relaxed text-sm">
                 From my first internship to leading full-stack projects, each
                 experience shaped my philosophy:
