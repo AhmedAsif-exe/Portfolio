@@ -1,5 +1,5 @@
 import { FC, memo, useState } from "react";
-
+import { ChevronDown } from "lucide-react";
 // Icon components
 const CalendarIcon = memo(() => (
   <svg
@@ -264,30 +264,18 @@ const Journey: FC = () => {
             </div>
           ))}
           {experiences.length > 2 && (
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-12">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="flex flex-col items-center text-[#06b6d4] hover:scale-110 transition-all duration-300"
+                className="flex items-center justify-center animate-bounce-slow cursor-pointer"
+                aria-label="Toggle projects"
               >
                 <div
-                  className={`transition-transform duration-300 ${
+                  className={`w-12 h-12 text-[#06b6d4] transition-transform duration-300 ${
                     showAll ? "rotate-180" : ""
                   }`}
                 >
-                  <svg
-                    width="48px"
-                    height="48px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M18.5303 9.46967C18.8232 9.76256 18.8232 10.2374 18.5303 10.5303L12.5303 16.5303C12.2374 16.8232 11.7626 16.8232 11.4697 16.5303L5.46967 10.5303C5.17678 10.2374 5.17678 9.76256 5.46967 9.46967C5.76256 9.17678 6.23744 9.17678 6.53033 9.46967L12 14.9393L17.4697 9.46967C17.7626 9.17678 18.2374 9.17678 18.5303 9.46967Z"
-                      fill="#b3b3b3"
-                    />
-                  </svg>
+                  <ChevronDown className="items-center" size={"48px"} />
                 </div>
               </button>
             </div>
